@@ -7,10 +7,15 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Azure install
+      uses: azure/CLI@v1
+           sudo apt-get update
+           sudo apt-get install azure-cli
 
+      
     - name: Azure Login
       uses: azure/login@v1
-      with:
+      with: 
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - name: Azure CLI Action
