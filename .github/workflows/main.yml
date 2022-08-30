@@ -16,5 +16,5 @@ jobs:
       - name: 'Run az commands'
         shell: pwsh
         run: |
-          $keyvault_token=Get-AzKeyVaultSecret -VaultName testkeyvaultsai  -AsPlainText -Name github-tm-spn-secret
-          az login --service-principal -u dcc35921-6a69-4b62-bd4f-a68324a88844 -p $keyvault_token --tenant 20f3b949-2903-4d24-9d01-ad8df676e397
+          
+          az login --service-principal -u dcc35921-6a69-4b62-bd4f-a68324a88844 -p ape8Q~XXYYbo~-RBnc31hhGD2e.V64tVM81BJaJR --tenant 20f3b949-2903-4d24-9d01-ad8df676e397
