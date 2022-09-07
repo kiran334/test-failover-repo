@@ -23,7 +23,7 @@ jobs:
           az account set --subscription ef16b033-ec3e-4659-b1b7-1532f58b43e3
           #az storage account failover -n mystoragefailover -g terraform-rg --yes
           #az storage account update --name mystoragefailover --resource-group terraform-rg --sku Standard_GRS
-          az cosmosdb failover-priority-change --failover-policies CentralUS=0  --name testfailovercosmos  --resource-group terraform-rg
+          az cosmosdb failover-priority-change --name testcosmosdb-sai  --resource-group terraform-rg --failover-policies "East US2=2" "CentralUS=0"  
 
 
 
