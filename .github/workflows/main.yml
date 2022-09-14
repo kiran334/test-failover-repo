@@ -23,7 +23,7 @@ jobs:
           az account set --subscription ef16b033-ec3e-4659-b1b7-1532f58b43e3
           
           #az postgres server create --name mypgsvr-eu --resource-group dev-rg --location "East US2" --admin-user saikiran545 --admin-password Pbjljs6#! --sku-name GP_Gen5_2
-          az postgres server replica create --name replica-cenus-pgsvr --source-server mypgsvr-eu --resource-group dev-rg --location CentralUS
+          az postgres server replica create --name replica-cenus-pgsvr-replica --source-server mypgsvr-eu --resource-group dev-rg --location CentralUS
           
           
           
