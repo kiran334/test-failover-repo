@@ -27,11 +27,11 @@ jobs:
           #az network private-endpoint create --name privaceratestreppe --resource-group dev-rg  --vnet-name privacera-vnet  --subnet privacera-subnet1  --private-connection-resource-id $(az resource show -g dev-rg -n replica-cenus-pgsvr --resource-type "Microsoft.DBforPostgreSQL/servers" --query "id" -o tsv)  --group-id postgresqlServer  --connection-name testrepconnection 
           
           az network private-dns zone create --resource-group dev-rg --name  "privatelink.postgres.database.azure.com" 
-          az network private-dns link vnet create --resource-group dev-rg --zone-name  "privatelink.postgres.database.azure.com" --name testdnslink  --virtual-network privacera-vnet --registration-enabled false
+          az network private-dns link vnet create --resource-group dev-rg --zone-name  "privatelink.postgres.database.azure.com" --name myprivatelink  --virtual-network privacera-vnet --registration-enabled false
           az resource show --ids /subscriptions/ef16b033-ec3e-4659-b1b7-1532f58b43e3/resourceGroups/dev-rg/providers/Microsoft.Network/networkInterfaces/privaceratestreppe.nic.535c9126-5f62-4450-931a-ba32161c34ac --api-version 2019-04-01 -o json
           
           az network private-dns record-set a create --name replica-cenus-pgsvr --zone-name privatelink.postgres.database.azure.com --resource-group dev-rg  
-          az network private-dns record-set a add-record --record-set-name replica-cenus-pgsvr --zone-name privatelink.postgres.database.azure.com --resource-group dev-rg -a 10.82.1.196
+          az network private-dns record-set a add-record --record-set-name replica-cenus-pgsvr --zone-name privatelink.postgres.database.azure.com --resource-group dev-rg -a 10.82.1.198
           
           
           #az storage account failover -n mystoragefailover -g terraform-rg --yes
