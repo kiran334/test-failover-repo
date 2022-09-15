@@ -31,7 +31,7 @@ jobs:
           az resource show --ids /subscriptions/ef16b033-ec3e-4659-b1b7-1532f58b43e3/resourceGroups/dev-rg/providers/Microsoft.Network/networkInterfaces/privaceratestreppe.nic.535c9126-5f62-4450-931a-ba32161c34ac --api-version 2019-04-01 -o json
           
           az network private-dns record-set a create --name replica-cenus-pgsvr --zone-name privatelink.postgres.database.azure.com --resource-group dev-rg  
-          az network private-dns record-set a add-record --record-set-name replica-cenus-pgsvr --zone-name privatelink.postgres.database.azure.com --resource-group dev-rg -a 10.82.1.198
+          az network private-dns record-set a add-record --record-set-name replica-cenus-pgsvr --zone-name privatelink.postgres.database.azure.com --resource-group dev-rg -a 10.82.1.197
           
           
           #az storage account failover -n mystoragefailover -g terraform-rg --yes
