@@ -17,8 +17,8 @@ jobs:
         shell: pwsh
         run: |
           
-          $kv_key_spn_id=az keyvault secret show --name github-tm-spn-spn-id --vault-name testkeyvaultsai1 --query value -o tsv
-          $kv_spn_secret=az keyvault secret show --name github-tm-spn-secret --vault-name testkeyvaultsai1 --query value -o tsv
+          $kv_key_spn_id=az keyvault secret show --name github-tm-spn-spn-id --vault-name testkeyvaultsai2 --query value -o tsv
+          $kv_spn_secret=az keyvault secret show --name github-tm-spn-secret --vault-name testkeyvaultsai2 --query value -o tsv
           az login --service-principal -u $kv_key_spn_id -p $kv_spn_secret --tenant 20f3b949-2903-4d24-9d01-ad8df676e397
           az account set --subscription ef16b033-ec3e-4659-b1b7-1532f58b43e3
           
