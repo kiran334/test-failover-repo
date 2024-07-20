@@ -23,8 +23,7 @@ jobs:
            #az storage account create --name mysakiran123 --resource-group dev-rg --location eastus2 --sku Standard_GRS --kind StorageV2 --access-tier Hot
            az storage account show --resource-group dev-rg --name mysakiran123 --query "geoReplicationStats"
 
-           
-           #az storage account failover -n mysakiran123 -g dev-rg --yes
+           az storage account failover -n mysakiran123 -g dev-rg --yes
            # az postgres server create --name mypgsvr-eu --resource-group dev-rg --location "East US2" --admin-user saikiran545 --admin-password Password@1234! --sku-name GP_Gen5_2
            # az postgres server replica create --name replica-cenus-pgsvr-replica --source-server mypgsvr-eu --resource-group dev-rg --location CentralUS --sku-name GP_Gen5_8
           
