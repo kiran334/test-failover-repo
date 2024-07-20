@@ -20,7 +20,7 @@ jobs:
 
            az login --service-principal -u b471c45c-3580-4c25-a34d-f11a87e52dd0 -p AKu8Q~tAbPifCgLaRfWi5pyAQd.IGcSxZI21RaTf --tenant 78959ae4-3fb1-4d7b-8e35-f92abe2324e4
            az account set --subscription fc04db5f-6926-4ff0-acbd-06d24a5ffdb2
-           az storage account create --name mystorageaccount123 --resource-group dev-rg --location eastus2 --sku Standard_GRS --kind StorageV2 --access-tier Hot
+           az storage account create --name mysakiran123 --resource-group dev-rg --location eastus2 --sku Standard_GRS --kind StorageV2 --access-tier Hot
            # az postgres server create --name mypgsvr-eu --resource-group dev-rg --location "East US2" --admin-user saikiran545 --admin-password Password@1234! --sku-name GP_Gen5_2
            # az postgres server replica create --name replica-cenus-pgsvr-replica --source-server mypgsvr-eu --resource-group dev-rg --location CentralUS --sku-name GP_Gen5_8
           
